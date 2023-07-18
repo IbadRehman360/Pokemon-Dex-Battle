@@ -1,0 +1,36 @@
+<% layout('layouts/boilerplate')%>
+  <link rel="stylesheet" href="/css/pick.css">
+
+  <main>
+    <div class="feedback-container">
+
+      <div class="feedback-content">
+        <h1 class="feedback-title">Select Pokemon</h1>
+        <p class="feedback-description">
+          Unleash your strategic prowess in an epic showdown of Pokémon battles, where every card holds the power to
+          determine your fate!
+        <form method="POST" action="/pokemon/battle">
+          <div class=" input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Select Name:</span>
+            <input type="text" class="form-control" name="selectedname" aria-label="Sizing example input" placeholder="name" value="<%= username %>" required aria-describedby="inputGroup-sizing-sm">
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Select Age</span>
+            <div class="rating-container">
+            </div>
+            <input type="number" class="form-control"  aria-label="Sizing example input" placeholder="number" required
+              aria-describedby="inputGroup-sizing-sm">
+          </div>
+          <div class="rating-container">
+            <button class="rating-circle" value="2">1</button>
+            <button class="rating-circle" value="3">2</button>
+            <button class="rating-circle" value="4">3</button>
+          </div>
+          <input value="" name="numBots" type="text" id="input-data" style="display: none;">
+
+          <button type="submit" class="feedback-button"> PLAY </button>
+        </form>
+        </p>
+      </div>
+      <script src="/javascript/pick.js"></script>
+  </main>

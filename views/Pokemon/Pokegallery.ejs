@@ -1,0 +1,16 @@
+<% layout('layouts/boilerplate')%>
+
+    <link rel="stylesheet" href="/css/gallery.css" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+
+    <div class="container-1">
+        <img class="uncle-img" src="/images/Uncle.webp" >
+        <div class="grid-container">
+            <% for (let i = 0; i < pokemonData.length; i++) { %>
+                <div class="grid-item">
+                    <img class="card-image" src="<%= pokemonData[i].image %>" alt="Pokemon Image" />
+                    <p class="card-title"> <%= pokemonData[i].name %> </p>
+                </div>
+            <% } %>
+        </div>
+    </div>

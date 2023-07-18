@@ -1,0 +1,52 @@
+<% layout('layouts/boilerplate') %>
+<link rel="stylesheet" href="/css/battle.css">
+<div class="first-image-container">
+  <img class="battle-img" src="/images/My project (1).png" alt="">
+</div>
+<hr>
+<main>
+
+
+<% for (let i = 0; i < selectedBots; i++) { %>
+  <div class="art-card">
+    <h5 style="font-weight: 500;">
+      <% if (i === 0) { %>
+        <%= selectedname %>
+        <% } else { %>
+        Bot <%= i + 1 %>
+      <% } %>
+    </h5>
+        <div class="art-image-container">
+      <img src="<%= botResults[i].sprites.front_default %>" alt="Bot <%= i + 1 %>'s Pokémon" class="pokemon-icon">
+      <div class="art-overlay"></div>
+    </div>
+
+    <% if (botResults[i]) { %>
+      <h1 class="art-title" >
+        <%= botResults[i].name %>
+      </h1>
+      <hr>
+      <p><strong>Height:</strong> <%= botResults[i].height %></p>
+      <p><strong>Weight:</strong> <%= botResults[i].weight %></p>
+      <hr>
+      <p class="art-description">
+        <p><strong>Stats:</strong></p>
+        <% for (let stat of botResults[i].stats) { %>
+          <%= stat.stat.name %>: <span class="pokemon-stats">  <%= stat.base_stat  %></span>
+        <% } %>
+      </p>
+    <% } else { %>
+      <p>No Pokémon assigned to Bot <%= i + 1 %></p>
+    <% } %>
+
+    <hr>
+    <div id="card-footer-<%= i %>" class="card-footer">VS</div>
+  </div>
+
+  <% if (selectedBots >= 2 && i < selectedBots - 1) { %>
+    <img class="vs-image" src="/images/9739b6102a8f69adf50403401a41ffbf.png" alt="">
+  <% } %>
+<% } %>
+
+<script src="/javascript/battle.js"></script>
+  </main>
