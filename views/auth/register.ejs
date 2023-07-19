@@ -1,6 +1,6 @@
 <% layout('layouts/boilerplate')%>
 <div class="container d-flex justify-content-center align-items-center mt-5">
-    <div class="row">
+    <div class="row" style="margin: 1.5rem 0rem 4rem 0rem;">
         <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
             <div class="card shadow">
                 <img src="/images/ash2.jfif" alt="" class="card-img-top" />
@@ -9,21 +9,21 @@
                     <form action="/register" method="POST" class="validated-form" novalidate>
                         <div class="mb-3">
                             <label class="form-label" for="username">Username</label>
-                            <input class="form-control" type="text" id="username" name="username" required autofocus>
+                            <input class="form-control" type="text" id="username" name="username" required autofocus style="display: block; width: 100%;">
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="email">Email</label>
-                            <input class="form-control" type="email" id="email" name="email" required>
+                            <input class="form-control" type="email" id="email" name="email" required style="display: block; width: 100%;">
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="password">Password</label>
-                            <input class="form-control" type="password" id="password" name="password" required>
+                            <input class="form-control" type="password" id="password" name="password" required style="display: block; width: 100%;">
                             <div class="valid-feedback">
                                 Looks good!
                             </div>

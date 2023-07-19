@@ -13,7 +13,7 @@ body {
 
 .container-1 {
     max-width: 2000px;
-    min-width: 100px;
+    min-width: 100%;
     padding: 40px;
     margin: 0 auto;
     text-align: center;
@@ -49,6 +49,8 @@ body {
     font-size: 1.4rem;
     font-family: 'Rubik', sans-serif;
     margin-top: 10px;
+    font-weight: 500;
+
 }
 
 @media (max-width: 875px) {
@@ -56,7 +58,7 @@ body {
         font-size: 1.2rem;
     }
     .uncle-img {
-        max-width: 45vh; 
+        max-width: 50vh; 
         height: auto;
         margin-bottom: 3rem;
     }
@@ -64,6 +66,18 @@ body {
         max-width: 80px; 
     }
     .grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
         }
+}
+@media (max-width: 320px) {
+    .uncle-img{
+        max-width: 36vh;
+    }
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(65px, 1fr));
+        }
+    .card-title{
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
 }

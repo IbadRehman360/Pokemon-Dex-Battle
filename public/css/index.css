@@ -89,3 +89,8 @@ h1 {
     height: 160px;
   }
 }
+@media (max-width: 325px){
+  .pokemon-welcome-image{
+    max-height: 130px;
+  }
+}
