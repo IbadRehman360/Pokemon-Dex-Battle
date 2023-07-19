@@ -2,9 +2,9 @@
   <link rel="stylesheet" href="/css/pick.css">
 
   <main>
-    <div class="feedback-container">
+    <div class="feedback-container" >
 
-      <div class="feedback-content">
+      <div class="feedback-content" >
         <h1 class="feedback-title">Select Pokemon</h1>
         <p class="feedback-description">
           Unleash your strategic prowess in an epic showdown of Pokémon battles, where every card holds the power to
@@ -12,13 +12,13 @@
         <form method="POST" action="/pokemon/battle">
           <div class=" input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing-sm">Select Name:</span>
-            <input type="text" class="form-control" name="selectedname" aria-label="Sizing example input" placeholder="name" value="<%= username %>" required aria-describedby="inputGroup-sizing-sm">
+            <input type="text" class="form-control" name="selectedname" aria-label="Sizing example input" placeholder="name" value="<%= username %>"  style="display: flex;"  required aria-describedby="inputGroup-sizing-sm">
           </div>
           <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing-sm">Select Age</span>
             <div class="rating-container">
             </div>
-            <input type="number" class="form-control"  aria-label="Sizing example input" placeholder="number" required
+            <input type="number" class="form-control"  aria-label="Sizing example input"  style="display: flex;"  placeholder="number" required
               aria-describedby="inputGroup-sizing-sm">
           </div>
           <div class="rating-container">
@@ -33,4 +33,6 @@
         </p>
       </div>
       <script src="/javascript/pick.js"></script>
+    </div>
+      
   </main>
